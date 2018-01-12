@@ -21,6 +21,11 @@ public class Main {
                     public int compare(Song song, Song song2) {
                         String s1 = song.getNameOfTheSong();
                         String s2 = song2.getNameOfTheSong();
+                        if (s1.equals(s2)) {
+                            Integer i1 = song.getTimeInSeconds();
+                            Integer i2 = song2.getTimeInSeconds();
+                            return i1.compareTo(i2);
+                        }
                         return s1.compareToIgnoreCase(s2);
                     }
                 });
